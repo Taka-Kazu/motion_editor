@@ -72,7 +72,7 @@ namespace AHO_for_windows
                 MessageBox.Show("(´･ω･`)%sが開けなかったよ\n", serialPort1.PortName);
                 return;
             }
-            richTextBox1.Text += serialPort1.PortName + "に接続しました\n";
+            print_log(serialPort1.PortName + "に接続しました\n");
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -112,10 +112,10 @@ namespace AHO_for_windows
             }
             catch (Exception exception)
             {
-                richTextBox1.Text += "送信時にエラーが発生しました\n";
+                print_log("送信時にエラーが発生しました\n");
             }
 
-            richTextBox1.Text += "received: ";
+            print_log("received: ");
             for (int i = 0; i < 5; i++)
             {
                 try
@@ -123,7 +123,7 @@ namespace AHO_for_windows
                     if (serialPort1.BytesToRead > 0)
                     {
                         Byte value = Convert.ToByte(serialPort1.ReadByte());
-                        richTextBox1.Text += value.ToString("X") + " ";
+                        print_log(value.ToString("X") + " ");
                         if (i == 4)
                         {
                             comboBox3.SelectedValue = value;
@@ -136,7 +136,7 @@ namespace AHO_for_windows
                 }
                 catch (Exception exception)
                 {
-                    richTextBox1.Text += "受信時にエラーが発生しました\n";
+                    print_log("受信時にエラーが発生しました\n");
                 }
             }
             richTextBox1.Text += "\n";
@@ -160,18 +160,18 @@ namespace AHO_for_windows
             }
             catch (Exception exception)
             {
-                richTextBox1.Text += "送信時にエラーが発生しました\n";
+                print_log("送信時にエラーが発生しました\n");
             }
-            richTextBox1.Text += "send: " + data[0].ToString("X") + " " + data[1].ToString("X") + " " + data[2].ToString("X") + "\n";
+            print_log("send: " + data[0].ToString("X") + " " + data[1].ToString("X") + " " + data[2].ToString("X") + "\n");
 
-            richTextBox1.Text += "received: ";
+            print_log("received: ");
             for (int i=0;i<6;i++) {
                 try
                 {
                     if(serialPort1.BytesToRead > 0)
                     {
                         Byte value = Convert.ToByte(serialPort1.ReadByte());
-                        richTextBox1.Text += value.ToString("X") + " ";
+                        print_log(value.ToString("X") + " ");
                     }
                     else
                     {
@@ -180,7 +180,7 @@ namespace AHO_for_windows
                 }
                 catch (Exception exception)
                 {
-                    richTextBox1.Text += "受信時にエラーが発生しました\n";
+                    print_log("受信時にエラーが発生しました\n");
                 }
             }
             richTextBox1.Text += "\n";
@@ -210,11 +210,12 @@ namespace AHO_for_windows
             }
             catch (Exception exception)
             {
-                richTextBox1.Text += "送信時にエラーが発生しました\n";
+                print_log("送信時にエラーが発生しました\n");
+                
             }
-            richTextBox1.Text += "send: " + data[0].ToString("X") + " " + data[1].ToString("X") + " " + data[2].ToString("X") + "\n";
+            print_log("send: " + data[0].ToString("X") + " " + data[1].ToString("X") + " " + data[2].ToString("X") + "\n");
 
-            richTextBox1.Text += "received: ";
+            print_log("received: ");
             for (int i = 0; i < 6; i++)
             {
                 try
@@ -231,10 +232,16 @@ namespace AHO_for_windows
                 }
                 catch (Exception exception)
                 {
-                    richTextBox1.Text += "受信時にエラーが発生しました\n";
+                    print_log("受信時にエラーが発生しました\n");
                 }
             }
-            richTextBox1.Text += "\n";
+            print_log("\n");
+        }
+        private void print_log(String str)
+        {
+            richTextBox1.AppendText(str);
+            richTextBox1.Select(richTextBox1.Text.Length, 0);
+            richTextBox1.ScrollToCaret();
         }
     }
 }
