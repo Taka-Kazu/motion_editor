@@ -124,6 +124,10 @@
             this.label31 = new System.Windows.Forms.Label();
             this.comboBox16 = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.button16 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
@@ -264,6 +268,7 @@
             this.button1.TabIndex = 42;
             this.button1.Text = "リセット";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // trackBar2
             // 
@@ -274,6 +279,7 @@
             this.trackBar2.Size = new System.Drawing.Size(121, 32);
             this.trackBar2.TabIndex = 41;
             this.trackBar2.Value = 135;
+            this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
             // 
             // numericUpDown2
             // 
@@ -291,6 +297,7 @@
             0,
             0,
             0});
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // label3
             // 
@@ -359,6 +366,7 @@
             this.button2.TabIndex = 48;
             this.button2.Text = "リセット";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // trackBar3
             // 
@@ -369,6 +377,7 @@
             this.trackBar3.Size = new System.Drawing.Size(121, 32);
             this.trackBar3.TabIndex = 47;
             this.trackBar3.Value = 135;
+            this.trackBar3.Scroll += new System.EventHandler(this.trackBar3_Scroll);
             // 
             // numericUpDown3
             // 
@@ -386,6 +395,7 @@
             0,
             0,
             0});
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // label5
             // 
@@ -454,6 +464,7 @@
             this.button3.TabIndex = 54;
             this.button3.Text = "リセット";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // trackBar4
             // 
@@ -464,6 +475,7 @@
             this.trackBar4.Size = new System.Drawing.Size(121, 32);
             this.trackBar4.TabIndex = 53;
             this.trackBar4.Value = 135;
+            this.trackBar4.Scroll += new System.EventHandler(this.trackBar4_Scroll);
             // 
             // numericUpDown4
             // 
@@ -481,6 +493,7 @@
             0,
             0,
             0});
+            this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
             // 
             // label7
             // 
@@ -549,6 +562,7 @@
             this.button4.TabIndex = 60;
             this.button4.Text = "リセット";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // trackBar5
             // 
@@ -559,6 +573,7 @@
             this.trackBar5.Size = new System.Drawing.Size(121, 32);
             this.trackBar5.TabIndex = 59;
             this.trackBar5.Value = 135;
+            this.trackBar5.Scroll += new System.EventHandler(this.trackBar5_Scroll);
             // 
             // numericUpDown5
             // 
@@ -576,6 +591,7 @@
             0,
             0,
             0});
+            this.numericUpDown5.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
             // 
             // label9
             // 
@@ -644,6 +660,7 @@
             this.button5.TabIndex = 66;
             this.button5.Text = "リセット";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // trackBar6
             // 
@@ -654,6 +671,7 @@
             this.trackBar6.Size = new System.Drawing.Size(121, 32);
             this.trackBar6.TabIndex = 65;
             this.trackBar6.Value = 135;
+            this.trackBar6.Scroll += new System.EventHandler(this.trackBar6_Scroll);
             // 
             // numericUpDown6
             // 
@@ -671,6 +689,7 @@
             0,
             0,
             0});
+            this.numericUpDown6.ValueChanged += new System.EventHandler(this.numericUpDown6_ValueChanged);
             // 
             // label11
             // 
@@ -739,6 +758,7 @@
             this.button6.TabIndex = 72;
             this.button6.Text = "リセット";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // trackBar7
             // 
@@ -749,6 +769,7 @@
             this.trackBar7.Size = new System.Drawing.Size(121, 32);
             this.trackBar7.TabIndex = 71;
             this.trackBar7.Value = 135;
+            this.trackBar7.Scroll += new System.EventHandler(this.trackBar7_Scroll);
             // 
             // numericUpDown7
             // 
@@ -766,6 +787,7 @@
             0,
             0,
             0});
+            this.numericUpDown7.ValueChanged += new System.EventHandler(this.numericUpDown7_ValueChanged);
             // 
             // label13
             // 
@@ -834,6 +856,7 @@
             this.button7.TabIndex = 78;
             this.button7.Text = "リセット";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // trackBar8
             // 
@@ -844,6 +867,7 @@
             this.trackBar8.Size = new System.Drawing.Size(121, 32);
             this.trackBar8.TabIndex = 77;
             this.trackBar8.Value = 135;
+            this.trackBar8.Scroll += new System.EventHandler(this.trackBar8_Scroll);
             // 
             // numericUpDown8
             // 
@@ -861,6 +885,7 @@
             0,
             0,
             0});
+            this.numericUpDown8.ValueChanged += new System.EventHandler(this.numericUpDown8_ValueChanged);
             // 
             // label15
             // 
@@ -929,6 +954,7 @@
             this.button8.TabIndex = 126;
             this.button8.Text = "リセット";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // trackBar9
             // 
@@ -939,6 +965,7 @@
             this.trackBar9.Size = new System.Drawing.Size(121, 32);
             this.trackBar9.TabIndex = 125;
             this.trackBar9.Value = 135;
+            this.trackBar9.Scroll += new System.EventHandler(this.trackBar9_Scroll);
             // 
             // numericUpDown9
             // 
@@ -956,6 +983,7 @@
             0,
             0,
             0});
+            this.numericUpDown9.ValueChanged += new System.EventHandler(this.numericUpDown9_ValueChanged);
             // 
             // label17
             // 
@@ -1024,6 +1052,7 @@
             this.button9.TabIndex = 120;
             this.button9.Text = "リセット";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // trackBar10
             // 
@@ -1034,6 +1063,7 @@
             this.trackBar10.Size = new System.Drawing.Size(121, 32);
             this.trackBar10.TabIndex = 119;
             this.trackBar10.Value = 135;
+            this.trackBar10.Scroll += new System.EventHandler(this.trackBar10_Scroll);
             // 
             // numericUpDown10
             // 
@@ -1051,6 +1081,7 @@
             0,
             0,
             0});
+            this.numericUpDown10.ValueChanged += new System.EventHandler(this.numericUpDown10_ValueChanged);
             // 
             // label19
             // 
@@ -1119,6 +1150,7 @@
             this.button10.TabIndex = 114;
             this.button10.Text = "リセット";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // trackBar11
             // 
@@ -1129,6 +1161,7 @@
             this.trackBar11.Size = new System.Drawing.Size(121, 32);
             this.trackBar11.TabIndex = 113;
             this.trackBar11.Value = 135;
+            this.trackBar11.Scroll += new System.EventHandler(this.trackBar11_Scroll);
             // 
             // numericUpDown11
             // 
@@ -1146,6 +1179,7 @@
             0,
             0,
             0});
+            this.numericUpDown11.ValueChanged += new System.EventHandler(this.numericUpDown11_ValueChanged);
             // 
             // label21
             // 
@@ -1214,6 +1248,7 @@
             this.button11.TabIndex = 108;
             this.button11.Text = "リセット";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // trackBar12
             // 
@@ -1224,6 +1259,7 @@
             this.trackBar12.Size = new System.Drawing.Size(121, 32);
             this.trackBar12.TabIndex = 107;
             this.trackBar12.Value = 135;
+            this.trackBar12.Scroll += new System.EventHandler(this.trackBar12_Scroll);
             // 
             // numericUpDown12
             // 
@@ -1241,6 +1277,7 @@
             0,
             0,
             0});
+            this.numericUpDown12.ValueChanged += new System.EventHandler(this.numericUpDown12_ValueChanged);
             // 
             // label23
             // 
@@ -1309,6 +1346,7 @@
             this.button12.TabIndex = 102;
             this.button12.Text = "リセット";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // trackBar13
             // 
@@ -1319,6 +1357,7 @@
             this.trackBar13.Size = new System.Drawing.Size(121, 32);
             this.trackBar13.TabIndex = 101;
             this.trackBar13.Value = 135;
+            this.trackBar13.Scroll += new System.EventHandler(this.trackBar13_Scroll);
             // 
             // numericUpDown13
             // 
@@ -1336,6 +1375,7 @@
             0,
             0,
             0});
+            this.numericUpDown13.ValueChanged += new System.EventHandler(this.numericUpDown13_ValueChanged);
             // 
             // label25
             // 
@@ -1404,6 +1444,7 @@
             this.button13.TabIndex = 96;
             this.button13.Text = "リセット";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // trackBar14
             // 
@@ -1414,6 +1455,7 @@
             this.trackBar14.Size = new System.Drawing.Size(121, 32);
             this.trackBar14.TabIndex = 95;
             this.trackBar14.Value = 135;
+            this.trackBar14.Scroll += new System.EventHandler(this.trackBar14_Scroll);
             // 
             // numericUpDown14
             // 
@@ -1431,6 +1473,7 @@
             0,
             0,
             0});
+            this.numericUpDown14.ValueChanged += new System.EventHandler(this.numericUpDown14_ValueChanged);
             // 
             // label27
             // 
@@ -1499,6 +1542,7 @@
             this.button14.TabIndex = 90;
             this.button14.Text = "リセット";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // trackBar15
             // 
@@ -1509,6 +1553,7 @@
             this.trackBar15.Size = new System.Drawing.Size(121, 32);
             this.trackBar15.TabIndex = 89;
             this.trackBar15.Value = 135;
+            this.trackBar15.Scroll += new System.EventHandler(this.trackBar15_Scroll);
             // 
             // numericUpDown15
             // 
@@ -1526,6 +1571,7 @@
             0,
             0,
             0});
+            this.numericUpDown15.ValueChanged += new System.EventHandler(this.numericUpDown15_ValueChanged);
             // 
             // label29
             // 
@@ -1594,6 +1640,7 @@
             this.button15.TabIndex = 84;
             this.button15.Text = "リセット";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // trackBar16
             // 
@@ -1604,6 +1651,7 @@
             this.trackBar16.Size = new System.Drawing.Size(121, 32);
             this.trackBar16.TabIndex = 83;
             this.trackBar16.Value = 135;
+            this.trackBar16.Scroll += new System.EventHandler(this.trackBar16_Scroll);
             // 
             // numericUpDown16
             // 
@@ -1621,6 +1669,7 @@
             0,
             0,
             0});
+            this.numericUpDown16.ValueChanged += new System.EventHandler(this.numericUpDown16_ValueChanged);
             // 
             // label31
             // 
@@ -1681,11 +1730,50 @@
             this.label32.TabIndex = 79;
             this.label32.Text = "ID";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(726, 470);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(49, 19);
+            this.textBox1.TabIndex = 127;
+            this.textBox1.Text = "1000";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(667, 473);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(53, 12);
+            this.label33.TabIndex = 128;
+            this.label33.Text = "動作時間";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(781, 473);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(28, 12);
+            this.label34.TabIndex = 129;
+            this.label34.Text = "[ms]";
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(977, 466);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(75, 23);
+            this.button16.TabIndex = 130;
+            this.button16.Text = "実行";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 501);
+            this.Controls.Add(this.button16);
+            this.Controls.Add(this.label34);
+            this.Controls.Add(this.label33);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.trackBar9);
             this.Controls.Add(this.numericUpDown9);
@@ -1919,5 +2007,9 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.ComboBox comboBox16;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Button button16;
     }
 }

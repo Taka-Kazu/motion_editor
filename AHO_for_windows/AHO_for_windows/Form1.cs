@@ -13,10 +13,11 @@ namespace AHO_for_windows
 {
     public partial class Form1 : Form
     {
+        const int SERVO_NUM = 16;
         string[] ports;
-        float[] neutral_angle = new float[16];
-        float[] min_angle = new float[16];
-        float[] max_angle = new float[16];
+        float[] neutral_angle = new float[SERVO_NUM];
+        float[] min_angle = new float[SERVO_NUM];
+        float[] max_angle = new float[SERVO_NUM];
 
         private static Form1 _form1Instance;
 
@@ -58,6 +59,7 @@ namespace AHO_for_windows
             neutral_angle[12] = 16; min_angle[12] = 16; max_angle[12] = 196;
             neutral_angle[13] = 52; min_angle[13] = 52; max_angle[13] = 144;
             neutral_angle[14] = 132; min_angle[14] = 45; max_angle[14] = 227;
+            neutral_angle[15] = 135; min_angle[14] = 0; max_angle[14] = 270;
         }
 
         private void COMComboBox_SelectedIndexChanged(object sender, EventArgs e)
