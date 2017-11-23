@@ -166,6 +166,7 @@
             this.button24.TabIndex = 36;
             this.button24.Text = "リセット";
             this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // trackBar1
             // 
@@ -176,6 +177,7 @@
             this.trackBar1.Size = new System.Drawing.Size(121, 32);
             this.trackBar1.TabIndex = 35;
             this.trackBar1.Value = 135;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // numericUpDown1
             // 
@@ -193,6 +195,7 @@
             0,
             0,
             0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label2
             // 

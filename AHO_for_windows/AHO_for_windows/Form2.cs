@@ -36,5 +36,21 @@ namespace AHO_for_windows
             comboBox10.SelectedIndex = 14;
             comboBox9.SelectedIndex = 15;
         }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            numericUpDown1.Value = trackBar1.Value;
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            trackBar1.Value = (int)numericUpDown1.Value;
+            ((Form1)this.Owner).send_angle(int.Parse(comboBox1.Text), ((Form1)this.Owner).angle2value((int)numericUpDown1.Value));
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            numericUpDown1.Value = 135;
+        }
     }
 }

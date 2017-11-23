@@ -18,6 +18,20 @@ namespace AHO_for_windows
         float[] min_angle = new float[16];
         float[] max_angle = new float[16];
 
+        private static Form1 _form1Instance;
+
+        public static Form1 Form1Instance
+        {
+            get
+            {
+                return _form1Instance;
+            }
+            set
+            {
+                _form1Instance = value;
+            }
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +39,7 @@ namespace AHO_for_windows
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Form1Instance = this;
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
             comboBox3.SelectedIndex = 0;
@@ -117,7 +132,7 @@ namespace AHO_for_windows
 
         private void button24_Click(object sender, EventArgs e)
         {
-            numericUpDown1.Value = 135;
+            numericUpDown1.Value = (int)neutral_angle[int.Parse(comboBox3.Text)];
         }
 
         private void button23_Click(object sender, EventArgs e)
@@ -150,6 +165,7 @@ namespace AHO_for_windows
                     }
                     else
                     {
+                        print_log("\n");
                         return;
                     }
                 }
@@ -158,10 +174,10 @@ namespace AHO_for_windows
                     print_log("受信時にエラーが発生しました\n");
                 }
             }
-            richTextBox1.Text += "\n";
+            print_log("\n");
         }
 
-        private void send_angle(int id, int angle)
+        public void send_angle(int id, int angle)
         {
             Byte[] data = new Byte[3];
             data[0] = Convert.ToByte(id | 0x80);
@@ -194,6 +210,7 @@ namespace AHO_for_windows
                     }
                     else
                     {
+                        print_log("\n");
                         return;
                     }
                 }
@@ -202,10 +219,10 @@ namespace AHO_for_windows
                     print_log("受信時にエラーが発生しました\n");
                 }
             }
-            richTextBox1.Text += "\n";
+            print_log("\n");
         }
 
-        private int angle2value(int angle)
+        public int angle2value(int angle)
         {
             int value = (int)((float)angle / (270.0f) * 8000.0f + 3500.0f);
             return value;
@@ -266,7 +283,7 @@ namespace AHO_for_windows
         private void button18_Click(object sender, EventArgs e)
         {
             Form2 f = new Form2();
-            f.ShowDialog();
+            f.ShowDialog(this);
             f.Dispose();
         }
     }
