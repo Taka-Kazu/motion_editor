@@ -21,7 +21,9 @@ namespace AHO_for_windows
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
+            comboBox3.SelectedIndex = 0;
         }
 
         private void COMComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -76,6 +78,81 @@ namespace AHO_for_windows
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             serialPort1.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            numericUpDown1.Value = trackBar1.Value;
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            trackBar1.Value = (int)numericUpDown1.Value;
+            send_ics(int.Parse(comboBox3.Text), angle2value((int)numericUpDown1.Value));
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            numericUpDown1.Value = 135;
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void send_ics(int id, int angle)
+        {
+            Byte[] data = new Byte[3];
+            data[0] = Convert.ToByte(id | 0x80);
+            data[1] = Convert.ToByte((angle >> 7) & 0b01111111);
+            data[2] = Convert.ToByte(angle & 0b01111111);
+            richTextBox1.Text += "send: " + data[0].ToString("X") + " " + data[1].ToString("X") + " " + data[2].ToString("X") + "\n";
+            if (!serialPort1.IsOpen)
+            {
+                MessageBox.Show("(´･ω･`)COMポートが開かれていないよ\n");
+                return;
+            }
+
+            try
+            {
+                serialPort1.Write(data, 0, 3);
+            }
+            catch (Exception exception)
+            {
+                richTextBox1.Text += "送信時にエラーが発生しました\n";
+            }
+
+            richTextBox1.Text += "received: ";
+            for (int i=0;i<6;i++) {
+                try
+                {
+                    if(serialPort1.BytesToRead > 0)
+                    {
+                        richTextBox1.Text += serialPort1.ReadByte().ToString("X") + " ";
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+                catch (Exception exception)
+                {
+                    richTextBox1.Text += "受信時にエラーが発生しました\n";
+                }
+            }
+            richTextBox1.Text += "\n";
+        }
+
+        private int angle2value(int angle)
+        {
+            int value = (int)((float)angle / (270.0f) * 8000.0f + 3500.0f);
+            return value;
         }
     }
 }
