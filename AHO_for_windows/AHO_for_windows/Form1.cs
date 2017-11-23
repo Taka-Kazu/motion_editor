@@ -42,13 +42,14 @@ namespace AHO_for_windows
 
         private void button1_Click(object sender, EventArgs ex)
         {
+            serialPort1.Close();
             try
             {
-                serialPort1.PortName = comboBox1.Text;
+                serialPort1.PortName = comboBox1.SelectedItem.ToString();
             }
             catch (Exception exception)
             {
-                MessageBox.Show("(´･ω･`)利用可能なCOMポートが選ばれていないよ");
+                MessageBox.Show("(´･ω･`)利用可能なCOMポートが選ばれていないよ\n");
                 return;
             }
             try
@@ -57,7 +58,7 @@ namespace AHO_for_windows
             }
             catch (Exception exception)
             {
-                MessageBox.Show("(´･ω･`)無効なBaudRateだよ");
+                MessageBox.Show("(´･ω･`)無効なBaudRateだよ\n");
                 return;
             }
             try
@@ -66,9 +67,10 @@ namespace AHO_for_windows
             }
             catch (Exception exception)
             {
-                MessageBox.Show("(´･ω･`)%sが開けなかったよ", serialPort1.PortName);
+                MessageBox.Show("(´･ω･`)%sが開けなかったよ\n", serialPort1.PortName);
                 return;
             }
+            richTextBox1.Text += serialPort1.PortName + "に接続しました\n";
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
