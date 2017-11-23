@@ -1740,6 +1740,7 @@
             this.textBox1.Size = new System.Drawing.Size(49, 19);
             this.textBox1.TabIndex = 127;
             this.textBox1.Text = "1000";
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // label33
             // 
@@ -1767,6 +1768,7 @@
             this.button16.TabIndex = 130;
             this.button16.Text = "実行";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // checkBox1
             // 
@@ -1907,6 +1909,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "PoseEditor";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();

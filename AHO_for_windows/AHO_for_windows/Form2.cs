@@ -373,7 +373,41 @@ namespace AHO_for_windows
 
         private void Form2_FormClosed(object sender, FormClosedEventArgs e)
         {
+            
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                try
+                {
+                    ((Form1)this.Owner).pose[pose_id].edit_time = Convert.ToInt32(textBox1.Text);
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show("(´･ω･`)100[ms]以上の時間を入力してね\n");
+                    return;
+                }
+                save();
+            }
+        }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
             save();
+            if (((Form1)this.Owner).pose[pose_id].edit_time < 100)
+            {
+                MessageBox.Show("(´･ω･`)100[ms]以上の時間を入力してね\n");
+                e.Cancel = true;
+                return;
+            }
+            
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
