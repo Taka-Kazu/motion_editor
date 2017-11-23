@@ -21,7 +21,7 @@ namespace AHO_for_windows
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void COMComboBox_SelectedIndexChanged(object sender, EventArgs e)

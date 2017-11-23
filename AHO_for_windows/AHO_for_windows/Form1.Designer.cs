@@ -77,7 +77,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(91, 20);
             this.comboBox1.TabIndex = 0;
-            this.comboBox1.Text = "COM1";
+            this.comboBox1.Text = "(未選択)";
             this.comboBox1.DropDown += new System.EventHandler(this.COMComboBox_DropDown);
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.COMComboBox_SelectedIndexChanged);
             // 
