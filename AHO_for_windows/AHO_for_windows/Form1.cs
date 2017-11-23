@@ -592,15 +592,28 @@ namespace AHO_for_windows
         {
             String str = File.ReadAllText(openFileDialog1.FileName);
             String[] lines = str.Split(new string[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries);
+            print_log(lines.Length.ToString());
+            
             for(int i = 0; i < lines.Length; i++)
             {
-                print_log(lines[i]);
-                print_log("\n");
-            }
-            print_log(lines.Length.ToString());
-            for(int i = 0; i < POSE_NUM; i++)
-            {
-
+                String[] data_str = lines[i].Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+                pose[i].enable();
+                for (int j = 0; j < data_str.Length; j++)
+                {
+                    if (j != 0) {
+                        if ((j - 1) == SERVO_NUM)
+                        {
+                            break;
+                        }
+                        pose[i].set_angle(j - 1, (int)float.Parse(data_str[j]));
+                    }
+                    else
+                    {
+                        pose[i].edit_time = int.Parse(data_str[0]);
+                    }
+                    //print_log(data_str[j] + "\n");
+                }
+                //print_log("\n");
             }
         }
     }
