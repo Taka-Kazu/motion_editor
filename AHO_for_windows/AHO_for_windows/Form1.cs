@@ -536,6 +536,7 @@ namespace AHO_for_windows
 
         public void move(int pose_id)
         {
+            /*
             const int dt = 50;
             int loop = pose[pose_id].edit_time / dt;
             int[] d_theta = new int[SERVO_NUM];
@@ -551,7 +552,13 @@ namespace AHO_for_windows
                 }
                 Task.Delay(dt);
                 //System.Threading.Thread.Sleep(dt);
+            }*/
+            for(int i = 0; i < SERVO_NUM; i++)
+            {
+                send_angle(i, pose[pose_id].get_angle(i));
             }
+            //Task.Delay(pose[pose_id].edit_time);
+            System.Threading.Thread.Sleep(pose[pose_id].edit_time);
         }
 
         private void button26_Click(object sender, EventArgs e)
