@@ -6,3 +6,12 @@ E:\Users\一貴\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\o
 E:\Users\一貴\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\obj\Debug\AHO_for_windows.csproj.GenerateResource.Cache
 E:\Users\一貴\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\obj\Debug\AHO_for_windows.exe
 E:\Users\一貴\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\obj\Debug\AHO_for_windows.pdb
+D:\Users\taka-\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\bin\Debug\AHO_for_windows.exe.config
+D:\Users\taka-\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\bin\Debug\AHO_for_windows.exe
+D:\Users\taka-\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\bin\Debug\AHO_for_windows.pdb
+D:\Users\taka-\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\obj\Debug\AHO_for_windows.csprojResolveAssemblyReference.cache
+D:\Users\taka-\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\obj\Debug\AHO_for_windows.Properties.Resources.resources
+D:\Users\taka-\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\obj\Debug\AHO_for_windows.csproj.GenerateResource.Cache
+D:\Users\taka-\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\obj\Debug\AHO_for_windows.csproj.CoreCompileInputs.cache
+D:\Users\taka-\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\obj\Debug\AHO_for_windows.exe
+D:\Users\taka-\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\obj\Debug\AHO_for_windows.pdb
