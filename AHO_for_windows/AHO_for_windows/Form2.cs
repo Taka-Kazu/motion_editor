@@ -45,12 +45,12 @@ namespace AHO_for_windows
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             trackBar1.Value = (int)numericUpDown1.Value;
-            ((Form1)this.Owner).send_angle(int.Parse(comboBox1.Text), ((Form1)this.Owner).angle2value((int)numericUpDown1.Value));
+            ((Form1)this.Owner).send_angle(int.Parse(comboBox3.Text), (int)numericUpDown1.Value);
         }
 
         private void button24_Click(object sender, EventArgs e)
         {
-            numericUpDown1.Value = 135;
+            numericUpDown1.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox3.Text));
         }
     }
 }

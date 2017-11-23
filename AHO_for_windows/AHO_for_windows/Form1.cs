@@ -127,7 +127,7 @@ namespace AHO_for_windows
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             trackBar1.Value = (int)numericUpDown1.Value;
-            send_angle(int.Parse(comboBox3.Text), angle2value((int)numericUpDown1.Value));
+            send_angle(int.Parse(comboBox3.Text), (int)numericUpDown1.Value);
         }
 
         private void button24_Click(object sender, EventArgs e)
@@ -179,6 +179,14 @@ namespace AHO_for_windows
 
         public void send_angle(int id, int angle)
         {
+            if(angle < min_angle[id])
+            {
+                angle = (int)min_angle[id];
+            }else if(angle > max_angle[id])
+            {
+                angle = (int)max_angle[id];
+            }
+            angle = angle2value(angle);
             Byte[] data = new Byte[3];
             data[0] = Convert.ToByte(id | 0x80);
             data[1] = Convert.ToByte((angle >> 7) & 0b01111111);
@@ -222,7 +230,7 @@ namespace AHO_for_windows
             print_log("\n");
         }
 
-        public int angle2value(int angle)
+        private int angle2value(int angle)
         {
             int value = (int)((float)angle / (270.0f) * 8000.0f + 3500.0f);
             return value;
@@ -285,6 +293,11 @@ namespace AHO_for_windows
             Form2 f = new Form2();
             f.ShowDialog(this);
             f.Dispose();
+        }
+
+        public float get_neutral_angle(int id)
+        {
+            return neutral_angle[id];
         }
     }
 }
