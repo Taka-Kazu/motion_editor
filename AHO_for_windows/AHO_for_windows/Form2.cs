@@ -17,6 +17,12 @@ namespace AHO_for_windows
             InitializeComponent();
         }
 
+        int pose_id = 0;
+        public void set_pose_id(int id)
+        {
+            pose_id = id;
+        }
+
         private void Form2_Load(object sender, EventArgs e)
         {
             comboBox3.SelectedIndex = 0;
@@ -35,6 +41,25 @@ namespace AHO_for_windows
             comboBox11.SelectedIndex = 13;
             comboBox10.SelectedIndex = 14;
             comboBox9.SelectedIndex = 15;
+
+            textBox1.Text = ((Form1)this.Owner).pose[pose_id].edit_time.ToString();
+            checkBox1.Checked = ((Form1)this.Owner).pose[pose_id].be_enabled();
+            trackBar1.Value = ((Form1)this.Owner).pose[pose_id].get_angle(0);
+            trackBar2.Value = ((Form1)this.Owner).pose[pose_id].get_angle(1);
+            trackBar3.Value = ((Form1)this.Owner).pose[pose_id].get_angle(2);
+            trackBar4.Value = ((Form1)this.Owner).pose[pose_id].get_angle(3);
+            trackBar5.Value = ((Form1)this.Owner).pose[pose_id].get_angle(4);
+            trackBar6.Value = ((Form1)this.Owner).pose[pose_id].get_angle(5);
+            trackBar7.Value = ((Form1)this.Owner).pose[pose_id].get_angle(6);
+            trackBar8.Value = ((Form1)this.Owner).pose[pose_id].get_angle(7);
+            trackBar16.Value = ((Form1)this.Owner).pose[pose_id].get_angle(8);
+            trackBar15.Value = ((Form1)this.Owner).pose[pose_id].get_angle(9);
+            trackBar14.Value = ((Form1)this.Owner).pose[pose_id].get_angle(10);
+            trackBar13.Value = ((Form1)this.Owner).pose[pose_id].get_angle(11);
+            trackBar12.Value = ((Form1)this.Owner).pose[pose_id].get_angle(12);
+            trackBar11.Value = ((Form1)this.Owner).pose[pose_id].get_angle(13);
+            trackBar10.Value = ((Form1)this.Owner).pose[pose_id].get_angle(14);
+            trackBar9.Value = ((Form1)this.Owner).pose[pose_id].get_angle(15);
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
@@ -291,6 +316,45 @@ namespace AHO_for_windows
         private void button8_Click(object sender, EventArgs e)
         {
             numericUpDown9.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox9.Text));
+        }
+
+        private void save()
+        {
+            ((Form1)this.Owner).pose[pose_id].edit_time = int.Parse(textBox1.Text);
+            if (checkBox1.Checked)
+            {
+                ((Form1)this.Owner).pose[pose_id].enable();
+            }
+            else
+            {
+                ((Form1)this.Owner).pose[pose_id].disable();
+            }
+            ((Form1)this.Owner).pose[pose_id].set_angle(0, trackBar1.Value);
+            ((Form1)this.Owner).pose[pose_id].set_angle(1, trackBar2.Value);
+            ((Form1)this.Owner).pose[pose_id].set_angle(2, trackBar3.Value);
+            ((Form1)this.Owner).pose[pose_id].set_angle(3, trackBar4.Value);
+            ((Form1)this.Owner).pose[pose_id].set_angle(4, trackBar5.Value);
+            ((Form1)this.Owner).pose[pose_id].set_angle(5, trackBar6.Value);
+            ((Form1)this.Owner).pose[pose_id].set_angle(6, trackBar7.Value);
+            ((Form1)this.Owner).pose[pose_id].set_angle(7, trackBar8.Value);
+            ((Form1)this.Owner).pose[pose_id].set_angle(8, trackBar16.Value);
+            ((Form1)this.Owner).pose[pose_id].set_angle(9, trackBar15.Value);
+            ((Form1)this.Owner).pose[pose_id].set_angle(10, trackBar14.Value);
+            ((Form1)this.Owner).pose[pose_id].set_angle(11, trackBar13.Value);
+            ((Form1)this.Owner).pose[pose_id].set_angle(12, trackBar12.Value);
+            ((Form1)this.Owner).pose[pose_id].set_angle(13, trackBar11.Value);
+            ((Form1)this.Owner).pose[pose_id].set_angle(14, trackBar10.Value);
+            ((Form1)this.Owner).pose[pose_id].set_angle(15, trackBar9.Value);
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            save();
         }
     }
 }

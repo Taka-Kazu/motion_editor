@@ -128,6 +128,7 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.button16 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
@@ -1732,7 +1733,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(726, 470);
+            this.textBox1.Location = new System.Drawing.Point(857, 474);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(49, 19);
             this.textBox1.TabIndex = 127;
@@ -1741,7 +1742,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(667, 473);
+            this.label33.Location = new System.Drawing.Point(798, 477);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(53, 12);
             this.label33.TabIndex = 128;
@@ -1750,7 +1751,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(781, 473);
+            this.label34.Location = new System.Drawing.Point(912, 477);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(28, 12);
             this.label34.TabIndex = 129;
@@ -1758,18 +1759,30 @@
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(977, 466);
+            this.button16.Location = new System.Drawing.Point(956, 445);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(75, 23);
+            this.button16.Size = new System.Drawing.Size(96, 44);
             this.button16.TabIndex = 130;
             this.button16.Text = "実行";
             this.button16.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(712, 476);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(68, 16);
+            this.checkBox1.TabIndex = 131;
+            this.checkBox1.Text = "ENABLE";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 501);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.label34);
             this.Controls.Add(this.label33);
@@ -1872,6 +1885,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "PoseEditor";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -2011,5 +2025,6 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

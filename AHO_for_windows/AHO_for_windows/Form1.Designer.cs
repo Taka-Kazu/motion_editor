@@ -69,6 +69,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
+            this.button26 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -511,12 +512,22 @@
             this.button25.UseVisualStyleBackColor = true;
             this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
+            // button26
+            // 
+            this.button26.Location = new System.Drawing.Point(12, 320);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(91, 46);
+            this.button26.TabIndex = 6;
+            this.button26.Text = "実行";
+            this.button26.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(704, 501);
+            this.Controls.Add(this.button26);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button1);
@@ -581,6 +592,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.Button button26;
     }
 }
 

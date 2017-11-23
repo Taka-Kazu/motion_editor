@@ -14,10 +14,12 @@ namespace AHO_for_windows
     public partial class Form1 : Form
     {
         const int SERVO_NUM = 16;
+        const int POSE_NUM = 20;
         string[] ports;
         float[] neutral_angle = new float[SERVO_NUM];
         float[] min_angle = new float[SERVO_NUM];
         float[] max_angle = new float[SERVO_NUM];
+        public Pose[] pose= new Pose[POSE_NUM];
 
         private static Form1 _form1Instance;
 
@@ -60,6 +62,11 @@ namespace AHO_for_windows
             neutral_angle[13] = 52; min_angle[13] = 52; max_angle[13] = 144;
             neutral_angle[14] = 132; min_angle[14] = 45; max_angle[14] = 227;
             neutral_angle[15] = 135; min_angle[14] = 0; max_angle[14] = 270;
+
+            for(int i = 0; i < POSE_NUM; i++)
+            {
+                pose[i] = new Pose();
+            }
         }
 
         private void COMComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -293,6 +300,7 @@ namespace AHO_for_windows
         private void button18_Click(object sender, EventArgs e)
         {
             Form2 f = new Form2();
+            f.set_pose_id(0);
             f.ShowDialog(this);
             f.Dispose();
         }
@@ -301,5 +309,60 @@ namespace AHO_for_windows
         {
             return neutral_angle[id];
         }
+
+        public partial class Pose
+        {
+            public Pose()
+            {
+                initialize();
+            }
+
+            private int time;
+            public int edit_time
+            {
+                set
+                {
+                    this.time = value;
+                }
+                get
+                {
+                    return this.time;
+                }
+            }
+            private int[] angle;
+            public void set_angle(int id, int _angle)
+            {
+                angle[id] = _angle;
+            }
+            public int get_angle(int id)
+            {
+                return angle[id];
+            }
+            private bool is_enabled;
+            public void enable()
+            {
+                is_enabled = true;
+            }
+            public void disable()
+            {
+                is_enabled = false;
+            }
+            public bool be_enabled()
+            {
+                return is_enabled;
+            }
+            public void initialize()
+            {
+                time = 1000;
+                angle = new int[SERVO_NUM];
+                is_enabled = false;
+                for(int i = 0; i < SERVO_NUM; i++)
+                {
+                    angle[i] = 135;
+                }
+            }
+        }
+        
+
     }
 }
