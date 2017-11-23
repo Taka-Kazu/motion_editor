@@ -92,6 +92,7 @@ namespace AHO_for_windows
                 checkBox1.Checked = false;
             }
 
+            checkBox2.Checked = ((Form1)this.Owner).pose[pose_id].ready;
 
             label36.Text = pose_id.ToString();
         }
@@ -529,6 +530,11 @@ namespace AHO_for_windows
             numericUpDown15.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox15.Text));
             numericUpDown16.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox16.Text));
 
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            ((Form1)this.Owner).pose[pose_id].ready = checkBox2.Checked;
         }
     }
 }

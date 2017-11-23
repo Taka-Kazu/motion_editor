@@ -360,6 +360,18 @@ namespace AHO_for_windows
                     angle[i] = 135;
                 }
             }
+            private bool ready_flag;
+            public bool ready
+            {
+                set
+                {
+                    this.ready_flag = value;
+                }
+                get
+                {
+                    return this.ready_flag;
+                }
+            }
             
         }
         private void button18_Click(object sender, EventArgs e)
