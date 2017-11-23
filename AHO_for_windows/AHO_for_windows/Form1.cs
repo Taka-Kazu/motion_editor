@@ -19,7 +19,8 @@ namespace AHO_for_windows
         float[] neutral_angle = new float[SERVO_NUM];
         float[] min_angle = new float[SERVO_NUM];
         float[] max_angle = new float[SERVO_NUM];
-        public Pose[] pose= new Pose[POSE_NUM];
+        public Pose[] pose = new Pose[POSE_NUM];
+        public Pose buff_pose;
 
         private static Form1 _form1Instance;
 
@@ -67,6 +68,7 @@ namespace AHO_for_windows
             {
                 pose[i] = new Pose();
             }
+            buff_pose = new Pose();
         }
 
         private void COMComboBox_SelectedIndexChanged(object sender, EventArgs e)

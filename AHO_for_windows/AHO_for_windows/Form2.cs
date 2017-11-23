@@ -25,6 +25,11 @@ namespace AHO_for_windows
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            update();
+        }
+
+        private void update()
+        {
             comboBox3.SelectedIndex = 0;
             comboBox1.SelectedIndex = 1;
             comboBox2.SelectedIndex = 2;
@@ -407,7 +412,54 @@ namespace AHO_for_windows
 
         private void button16_Click(object sender, EventArgs e)
         {
-            
+            save();
+            int loop = ((Form1)this.Owner).pose[pose_id].edit_time / 100;
+            int[] d_theta = new int[20];
+            for(int i = 0; i < 20; i++)
+            {
+                d_theta[i] = (int)((float)(((Form1)this.Owner).pose[pose_id].get_angle(i)) / loop);
+            }
+            for (int i=0;i<loop ;i++)
+            {
+
+                Task.Delay(100);
+            }
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            save();
+            ((Form1)this.Owner).buff_pose.edit_time = ((Form1)this.Owner).pose[pose_id].edit_time;
+            if (((Form1)this.Owner).pose[pose_id].be_enabled())
+            {
+                ((Form1)this.Owner).buff_pose.enable();
+            }
+            else
+            {
+                ((Form1)this.Owner).buff_pose.disable();
+            }
+            for(int i= 0; i < 16; i++)
+            {
+                ((Form1)this.Owner).buff_pose.set_angle(i, ((Form1)this.Owner).pose[pose_id].get_angle(i));
+            }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            ((Form1)this.Owner).pose[pose_id].edit_time = ((Form1)this.Owner).buff_pose.edit_time;
+            if (((Form1)this.Owner).buff_pose.be_enabled())
+            {
+                ((Form1)this.Owner).pose[pose_id].enable();
+            }
+            else
+            {
+                ((Form1)this.Owner).pose[pose_id].disable();
+            }
+            for (int i = 0; i < 16; i++)
+            {
+                ((Form1)this.Owner).pose[pose_id].set_angle(i, ((Form1)this.Owner).buff_pose.get_angle(i));
+            }
+            update();
         }
     }
 }
