@@ -148,7 +148,6 @@ namespace AHO_for_windows
             data[0] = Convert.ToByte(id | 0x80);
             data[1] = Convert.ToByte((angle >> 7) & 0b01111111);
             data[2] = Convert.ToByte(angle & 0b01111111);
-            richTextBox1.Text += "send: " + data[0].ToString("X") + " " + data[1].ToString("X") + " " + data[2].ToString("X") + "\n";
             if (!serialPort1.IsOpen)
             {
                 MessageBox.Show("(´･ω･`)COMポートが開かれていないよ\n");
@@ -163,6 +162,7 @@ namespace AHO_for_windows
             {
                 richTextBox1.Text += "送信時にエラーが発生しました\n";
             }
+            richTextBox1.Text += "send: " + data[0].ToString("X") + " " + data[1].ToString("X") + " " + data[2].ToString("X") + "\n";
 
             richTextBox1.Text += "received: ";
             for (int i=0;i<6;i++) {
@@ -194,7 +194,47 @@ namespace AHO_for_windows
 
         private void button25_Click(object sender, EventArgs e)
         {
-            
+            Byte[] data = new Byte[3];
+            data[0] = Convert.ToByte(Convert.ToInt32(comboBox3.SelectedValue) | 0x80);
+            data[1] = 0;
+            data[2] = 0;
+            if (!serialPort1.IsOpen)
+            {
+                MessageBox.Show("(´･ω･`)COMポートが開かれていないよ\n");
+                return;
+            }
+
+            try
+            {
+                serialPort1.Write(data, 0, 3);
+            }
+            catch (Exception exception)
+            {
+                richTextBox1.Text += "送信時にエラーが発生しました\n";
+            }
+            richTextBox1.Text += "send: " + data[0].ToString("X") + " " + data[1].ToString("X") + " " + data[2].ToString("X") + "\n";
+
+            richTextBox1.Text += "received: ";
+            for (int i = 0; i < 6; i++)
+            {
+                try
+                {
+                    if (serialPort1.BytesToRead > 0)
+                    {
+                        Byte value = Convert.ToByte(serialPort1.ReadByte());
+                        richTextBox1.Text += value.ToString("X") + " ";
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+                catch (Exception exception)
+                {
+                    richTextBox1.Text += "受信時にエラーが発生しました\n";
+                }
+            }
+            richTextBox1.Text += "\n";
         }
     }
 }
