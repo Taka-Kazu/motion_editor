@@ -70,6 +70,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.保存SToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -107,22 +110,25 @@
             // 
             this.ファイルToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.新規ToolStripMenuItem,
-            this.開くToolStripMenuItem});
+            this.開くToolStripMenuItem,
+            this.保存SToolStripMenuItem});
             this.ファイルToolStripMenuItem.Name = "ファイルToolStripMenuItem";
-            this.ファイルToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.ファイルToolStripMenuItem.Text = "ファイル";
+            this.ファイルToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.ファイルToolStripMenuItem.Text = "ファイル(&F)";
             // 
             // 新規ToolStripMenuItem
             // 
             this.新規ToolStripMenuItem.Name = "新規ToolStripMenuItem";
-            this.新規ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
-            this.新規ToolStripMenuItem.Text = "新規";
+            this.新規ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.新規ToolStripMenuItem.Text = "新規(&N)";
+            this.新規ToolStripMenuItem.Click += new System.EventHandler(this.新規ToolStripMenuItem_Click);
             // 
             // 開くToolStripMenuItem
             // 
             this.開くToolStripMenuItem.Name = "開くToolStripMenuItem";
-            this.開くToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
-            this.開くToolStripMenuItem.Text = "開く";
+            this.開くToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.開くToolStripMenuItem.Text = "開く(&O)";
+            this.開くToolStripMenuItem.Click += new System.EventHandler(this.開くToolStripMenuItem_Click);
             // 
             // comboBox2
             // 
@@ -541,6 +547,24 @@
             this.button26.UseVisualStyleBackColor = true;
             this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "csvファイル(*.csv)|*.csv";
+            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "csvファイル(*.csv)|*.csv";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
+            // 保存SToolStripMenuItem
+            // 
+            this.保存SToolStripMenuItem.Name = "保存SToolStripMenuItem";
+            this.保存SToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+S";
+            this.保存SToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.保存SToolStripMenuItem.Text = "保存(&S)";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -613,6 +637,9 @@
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem 保存SToolStripMenuItem;
     }
 }
 

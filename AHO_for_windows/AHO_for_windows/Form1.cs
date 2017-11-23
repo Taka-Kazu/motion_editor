@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
+using System.IO;
 
 namespace AHO_for_windows
 {
@@ -297,11 +298,11 @@ namespace AHO_for_windows
         }
         private void print_log(String str)
         {
-            /*
+            
             richTextBox1.AppendText(str);
             richTextBox1.Select(richTextBox1.Text.Length, 0);
             richTextBox1.ScrollToCaret();
-            */
+            
         }
 
         public float get_neutral_angle(int id)
@@ -569,6 +570,37 @@ namespace AHO_for_windows
                 {
                     move(i);
                 }
+            }
+        }
+
+        private void 新規ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 開くToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog(this);
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            String str = File.ReadAllText(openFileDialog1.FileName);
+            String[] lines = str.Split(new string[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries);
+            for(int i = 0; i < lines.Length; i++)
+            {
+                print_log(lines[i]);
+                print_log("\n");
+            }
+            print_log(lines.Length.ToString());
+            for(int i = 0; i < POSE_NUM; i++)
+            {
+
             }
         }
     }
