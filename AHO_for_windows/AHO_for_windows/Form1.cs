@@ -553,5 +553,16 @@ namespace AHO_for_windows
                 //System.Threading.Thread.Sleep(dt);
             }
         }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            for(int i = 0; i < POSE_NUM; i++)
+            {
+                if (pose[i].ready)
+                {
+                    move(i);
+                }
+            }
+        }
     }
 }
