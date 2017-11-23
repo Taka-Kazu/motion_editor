@@ -616,5 +616,10 @@ namespace AHO_for_windows
                 //print_log("\n");
             }
         }
+
+        private void 保存SToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.ShowDialog(this);
+        }
     }
 }
