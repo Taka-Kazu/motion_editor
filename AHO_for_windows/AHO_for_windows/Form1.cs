@@ -14,6 +14,10 @@ namespace AHO_for_windows
     public partial class Form1 : Form
     {
         string[] ports;
+        float[] neutral_angle = new float[16];
+        float[] min_angle = new float[16];
+        float[] max_angle = new float[16];
+
         public Form1()
         {
             InitializeComponent();
@@ -24,6 +28,21 @@ namespace AHO_for_windows
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
             comboBox3.SelectedIndex = 0;
+            neutral_angle[0] = 114; min_angle[0] = 96; max_angle[0] = 187;
+            neutral_angle[1] = 104; min_angle[1] = 48; max_angle[1] = 104;
+            neutral_angle[2] = 105; min_angle[2] = 105; max_angle[2] = 169;
+            neutral_angle[3] = 122; min_angle[3] = 122; max_angle[3] = 216;
+            neutral_angle[4] = 132; min_angle[4] = 91; max_angle[4] = 174;
+            neutral_angle[5] = 131; min_angle[5] = 64; max_angle[5] = 146;
+            neutral_angle[6] = 137; min_angle[6] = 137; max_angle[6] = 213;
+            neutral_angle[7] = 143; min_angle[7] = 74; max_angle[7] = 143;
+            neutral_angle[8] = 123; min_angle[8] = 32; max_angle[8] = 123;
+            neutral_angle[9] = 137; min_angle[9] = 137; max_angle[9] = 185;
+            neutral_angle[10] = 180; min_angle[10] = 0; max_angle[10] = 180;
+            neutral_angle[11] = 135; min_angle[11] = 16; max_angle[11] = 135;
+            neutral_angle[12] = 16; min_angle[12] = 16; max_angle[12] = 196;
+            neutral_angle[13] = 52; min_angle[13] = 52; max_angle[13] = 144;
+            neutral_angle[14] = 132; min_angle[14] = 45; max_angle[14] = 227;
         }
 
         private void COMComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -242,6 +261,13 @@ namespace AHO_for_windows
             richTextBox1.AppendText(str);
             richTextBox1.Select(richTextBox1.Text.Length, 0);
             richTextBox1.ScrollToCaret();
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.ShowDialog();
+            f.Dispose();
         }
     }
 }
