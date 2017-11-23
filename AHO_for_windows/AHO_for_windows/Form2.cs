@@ -60,6 +60,23 @@ namespace AHO_for_windows
             trackBar11.Value = ((Form1)this.Owner).pose[pose_id].get_angle(13);
             trackBar10.Value = ((Form1)this.Owner).pose[pose_id].get_angle(14);
             trackBar9.Value = ((Form1)this.Owner).pose[pose_id].get_angle(15);
+
+            numericUpDown1.Value = ((Form1)this.Owner).pose[pose_id].get_angle(0);
+            numericUpDown2.Value = ((Form1)this.Owner).pose[pose_id].get_angle(1);
+            numericUpDown3.Value = ((Form1)this.Owner).pose[pose_id].get_angle(2);
+            numericUpDown4.Value = ((Form1)this.Owner).pose[pose_id].get_angle(3);
+            numericUpDown5.Value = ((Form1)this.Owner).pose[pose_id].get_angle(4);
+            numericUpDown6.Value = ((Form1)this.Owner).pose[pose_id].get_angle(5);
+            numericUpDown7.Value = ((Form1)this.Owner).pose[pose_id].get_angle(6);
+            numericUpDown8.Value = ((Form1)this.Owner).pose[pose_id].get_angle(7);
+            numericUpDown16.Value = ((Form1)this.Owner).pose[pose_id].get_angle(8);
+            numericUpDown15.Value = ((Form1)this.Owner).pose[pose_id].get_angle(9);
+            numericUpDown14.Value = ((Form1)this.Owner).pose[pose_id].get_angle(10);
+            numericUpDown13.Value = ((Form1)this.Owner).pose[pose_id].get_angle(11);
+            numericUpDown12.Value = ((Form1)this.Owner).pose[pose_id].get_angle(12);
+            numericUpDown11.Value = ((Form1)this.Owner).pose[pose_id].get_angle(13);
+            numericUpDown10.Value = ((Form1)this.Owner).pose[pose_id].get_angle(14);
+            numericUpDown9.Value = ((Form1)this.Owner).pose[pose_id].get_angle(15);
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)

@@ -297,14 +297,6 @@ namespace AHO_for_windows
             richTextBox1.ScrollToCaret();
         }
 
-        private void button18_Click(object sender, EventArgs e)
-        {
-            Form2 f = new Form2();
-            f.set_pose_id(0);
-            f.ShowDialog(this);
-            f.Dispose();
-        }
-
         public float get_neutral_angle(int id)
         {
             return neutral_angle[id];
@@ -362,7 +354,13 @@ namespace AHO_for_windows
                 }
             }
         }
-        
+        private void button18_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(0);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
 
     }
 }
