@@ -509,5 +509,26 @@ namespace AHO_for_windows
             }
             update();
         }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            numericUpDown1.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox3.Text));
+            numericUpDown2.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox1.Text));
+            numericUpDown3.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox2.Text));
+            numericUpDown4.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox4.Text));
+            numericUpDown5.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox5.Text));
+            numericUpDown6.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox6.Text));
+            numericUpDown7.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox7.Text));
+            numericUpDown8.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox8.Text));
+            numericUpDown9.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox9.Text));
+            numericUpDown10.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox10.Text));
+            numericUpDown11.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox11.Text));
+            numericUpDown12.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox12.Text));
+            numericUpDown13.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox13.Text));
+            numericUpDown14.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox14.Text));
+            numericUpDown15.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox15.Text));
+            numericUpDown16.Value = (int)((Form1)this.Owner).get_neutral_angle(int.Parse(comboBox16.Text));
+
+        }
     }
 }
