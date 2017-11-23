@@ -72,6 +72,7 @@ namespace AHO_for_windows
             }
             buff_pose = new Pose();
             current_pose = new Pose();
+
         }
 
         private void COMComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -585,7 +586,27 @@ namespace AHO_for_windows
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-
+            System.IO.Stream stream;
+            stream = saveFileDialog1.OpenFile();
+            if(stream != null){
+                System.IO.StreamWriter sw = new System.IO.StreamWriter(stream);
+                for(int i = 0; i < POSE_NUM; i++)
+                {
+                    String str = "";
+                    if (pose[i].ready)
+                    {
+                        str += pose[i].edit_time.ToString() + ',';
+                        for(int j = 0; j < SERVO_NUM; j++)
+                        {
+                            str += pose[i].get_angle(j).ToString() + ',';
+                        }
+                        str += "\n";
+                        sw.WriteLine(str);
+                    }
+                }
+                sw.Close();
+                stream.Close();
+            }
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -611,6 +632,7 @@ namespace AHO_for_windows
                     {
                         pose[i].edit_time = int.Parse(data_str[0]);
                     }
+                    pose[i].ready = true;
                     //print_log(data_str[j] + "\n");
                 }
                 //print_log("\n");
