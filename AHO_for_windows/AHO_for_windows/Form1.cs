@@ -362,5 +362,156 @@ namespace AHO_for_windows
             f.Dispose();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(1);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(2);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(3);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(4);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(5);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(6);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(7);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(8);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(9);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(10);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(11);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(12);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(13);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(14);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(15);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(16);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(17);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(18);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.set_pose_id(19);
+            f.ShowDialog(this);
+            f.Dispose();
+        }
     }
 }
