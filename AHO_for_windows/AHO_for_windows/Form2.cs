@@ -77,6 +77,8 @@ namespace AHO_for_windows
             numericUpDown11.Value = ((Form1)this.Owner).pose[pose_id].get_angle(13);
             numericUpDown10.Value = ((Form1)this.Owner).pose[pose_id].get_angle(14);
             numericUpDown9.Value = ((Form1)this.Owner).pose[pose_id].get_angle(15);
+
+            label36.Text = pose_id.ToString();
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)

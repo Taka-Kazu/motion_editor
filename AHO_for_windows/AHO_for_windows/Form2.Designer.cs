@@ -129,6 +129,8 @@
             this.label34 = new System.Windows.Forms.Label();
             this.button16 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
@@ -1777,11 +1779,31 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(12, 9);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(27, 12);
+            this.label35.TabIndex = 132;
+            this.label35.Text = "POS";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(45, 9);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(11, 12);
+            this.label36.TabIndex = 133;
+            this.label36.Text = "0";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 501);
+            this.Controls.Add(this.label36);
+            this.Controls.Add(this.label35);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.label34);
@@ -2026,5 +2048,7 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
     }
 }
