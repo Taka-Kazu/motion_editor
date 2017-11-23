@@ -21,6 +21,7 @@ namespace AHO_for_windows
         float[] max_angle = new float[SERVO_NUM];
         public Pose[] pose = new Pose[POSE_NUM];
         public Pose buff_pose;
+        public Pose current_pose;
 
         private static Form1 _form1Instance;
 
@@ -69,6 +70,7 @@ namespace AHO_for_windows
                 pose[i] = new Pose();
             }
             buff_pose = new Pose();
+            current_pose = new Pose();
         }
 
         private void COMComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -197,6 +199,7 @@ namespace AHO_for_windows
             {
                 angle = (int)max_angle[id];
             }
+            current_pose.set_angle(id, angle);
             angle = angle2value(angle);
             Byte[] data = new Byte[3];
             data[0] = Convert.ToByte(id | 0x80);
@@ -294,9 +297,11 @@ namespace AHO_for_windows
         }
         private void print_log(String str)
         {
+            /*
             richTextBox1.AppendText(str);
             richTextBox1.Select(richTextBox1.Text.Length, 0);
             richTextBox1.ScrollToCaret();
+            */
         }
 
         public float get_neutral_angle(int id)
@@ -355,6 +360,7 @@ namespace AHO_for_windows
                     angle[i] = 135;
                 }
             }
+            
         }
         private void button18_Click(object sender, EventArgs e)
         {
@@ -514,6 +520,26 @@ namespace AHO_for_windows
             f.set_pose_id(19);
             f.ShowDialog(this);
             f.Dispose();
+        }
+
+        public void move(int pose_id)
+        {
+            const int dt = 50;
+            int loop = pose[pose_id].edit_time / dt;
+            int[] d_theta = new int[SERVO_NUM];
+            for (int i = 0; i < SERVO_NUM; i++)
+            {
+                d_theta[i] = (int)((float)(pose[pose_id].get_angle(i) - current_pose.get_angle(i)) / loop);
+            }
+            for (int i = 0; i < loop; i++)
+            {
+                for (int j = 0; j < SERVO_NUM; j++)
+                {
+                    send_angle(j, current_pose.get_angle(j) + d_theta[j] * i);
+                }
+                Task.Delay(dt);
+                //System.Threading.Thread.Sleep(dt);
+            }
         }
     }
 }

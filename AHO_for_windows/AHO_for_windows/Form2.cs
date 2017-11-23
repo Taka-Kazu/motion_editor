@@ -83,6 +83,16 @@ namespace AHO_for_windows
             numericUpDown10.Value = ((Form1)this.Owner).pose[pose_id].get_angle(14);
             numericUpDown9.Value = ((Form1)this.Owner).pose[pose_id].get_angle(15);
 
+            if (((Form1)this.Owner).pose[pose_id].be_enabled())
+            {
+                checkBox1.Checked = true;
+            }
+            else
+            {
+                checkBox1.Checked = false;
+            }
+
+
             label36.Text = pose_id.ToString();
         }
 
@@ -94,7 +104,10 @@ namespace AHO_for_windows
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             trackBar1.Value = (int)numericUpDown1.Value;
-            ((Form1)this.Owner).send_angle(int.Parse(comboBox3.Text), (int)numericUpDown1.Value);
+            if (checkBox1.Checked)
+            {
+                ((Form1)this.Owner).send_angle(int.Parse(comboBox3.Text), (int)numericUpDown1.Value);
+            }
         }
 
         private void button24_Click(object sender, EventArgs e)
@@ -110,7 +123,10 @@ namespace AHO_for_windows
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
             trackBar2.Value = (int)numericUpDown2.Value;
-            ((Form1)this.Owner).send_angle(int.Parse(comboBox1.Text), (int)numericUpDown2.Value);
+            if (checkBox1.Checked)
+            {
+                ((Form1)this.Owner).send_angle(int.Parse(comboBox1.Text), (int)numericUpDown2.Value);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -126,7 +142,10 @@ namespace AHO_for_windows
         private void numericUpDown3_ValueChanged(object sender, EventArgs e)
         {
             trackBar3.Value = (int)numericUpDown3.Value;
-            ((Form1)this.Owner).send_angle(int.Parse(comboBox2.Text), (int)numericUpDown3.Value);
+            if (checkBox1.Checked)
+            {
+                ((Form1)this.Owner).send_angle(int.Parse(comboBox2.Text), (int)numericUpDown3.Value);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -142,7 +161,10 @@ namespace AHO_for_windows
         private void numericUpDown4_ValueChanged(object sender, EventArgs e)
         {
             trackBar4.Value = (int)numericUpDown4.Value;
-            ((Form1)this.Owner).send_angle(int.Parse(comboBox4.Text), (int)numericUpDown4.Value);
+            if (checkBox1.Checked)
+            {
+                ((Form1)this.Owner).send_angle(int.Parse(comboBox4.Text), (int)numericUpDown4.Value);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -158,7 +180,10 @@ namespace AHO_for_windows
         private void numericUpDown5_ValueChanged(object sender, EventArgs e)
         {
             trackBar5.Value = (int)numericUpDown5.Value;
-            ((Form1)this.Owner).send_angle(int.Parse(comboBox5.Text), (int)numericUpDown5.Value);
+            if (checkBox1.Checked)
+            {
+                ((Form1)this.Owner).send_angle(int.Parse(comboBox5.Text), (int)numericUpDown5.Value);
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -174,7 +199,10 @@ namespace AHO_for_windows
         private void numericUpDown6_ValueChanged(object sender, EventArgs e)
         {
             trackBar6.Value = (int)numericUpDown6.Value;
-            ((Form1)this.Owner).send_angle(int.Parse(comboBox6.Text), (int)numericUpDown6.Value);
+            if (checkBox1.Checked)
+            {
+                ((Form1)this.Owner).send_angle(int.Parse(comboBox6.Text), (int)numericUpDown6.Value);
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -190,7 +218,10 @@ namespace AHO_for_windows
         private void numericUpDown7_ValueChanged(object sender, EventArgs e)
         {
             trackBar7.Value = (int)numericUpDown7.Value;
-            ((Form1)this.Owner).send_angle(int.Parse(comboBox7.Text), (int)numericUpDown7.Value);
+            if (checkBox1.Checked)
+            {
+                ((Form1)this.Owner).send_angle(int.Parse(comboBox7.Text), (int)numericUpDown7.Value);
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -206,7 +237,10 @@ namespace AHO_for_windows
         private void numericUpDown8_ValueChanged(object sender, EventArgs e)
         {
             trackBar8.Value = (int)numericUpDown8.Value;
-            ((Form1)this.Owner).send_angle(int.Parse(comboBox8.Text), (int)numericUpDown8.Value);
+            if (checkBox1.Checked)
+            {
+                ((Form1)this.Owner).send_angle(int.Parse(comboBox8.Text), (int)numericUpDown8.Value);
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -222,7 +256,10 @@ namespace AHO_for_windows
         private void numericUpDown16_ValueChanged(object sender, EventArgs e)
         {
             trackBar16.Value = (int)numericUpDown16.Value;
-            ((Form1)this.Owner).send_angle(int.Parse(comboBox16.Text), (int)numericUpDown16.Value);
+            if (checkBox1.Checked)
+            {
+                ((Form1)this.Owner).send_angle(int.Parse(comboBox16.Text), (int)numericUpDown16.Value);
+            }
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -238,7 +275,10 @@ namespace AHO_for_windows
         private void numericUpDown15_ValueChanged(object sender, EventArgs e)
         {
             trackBar15.Value = (int)numericUpDown15.Value;
-            ((Form1)this.Owner).send_angle(int.Parse(comboBox15.Text), (int)numericUpDown15.Value);
+            if (checkBox1.Checked)
+            {
+                ((Form1)this.Owner).send_angle(int.Parse(comboBox15.Text), (int)numericUpDown15.Value);
+            }
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -254,7 +294,10 @@ namespace AHO_for_windows
         private void numericUpDown14_ValueChanged(object sender, EventArgs e)
         {
             trackBar14.Value = (int)numericUpDown14.Value;
-            ((Form1)this.Owner).send_angle(int.Parse(comboBox14.Text), (int)numericUpDown14.Value);
+            if (checkBox1.Checked)
+            {
+                ((Form1)this.Owner).send_angle(int.Parse(comboBox14.Text), (int)numericUpDown14.Value);
+            }
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -270,7 +313,10 @@ namespace AHO_for_windows
         private void numericUpDown13_ValueChanged(object sender, EventArgs e)
         {
             trackBar13.Value = (int)numericUpDown13.Value;
-            ((Form1)this.Owner).send_angle(int.Parse(comboBox13.Text), (int)numericUpDown13.Value);
+            if (checkBox1.Checked)
+            {
+                ((Form1)this.Owner).send_angle(int.Parse(comboBox13.Text), (int)numericUpDown13.Value);
+            }
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -286,7 +332,10 @@ namespace AHO_for_windows
         private void numericUpDown12_ValueChanged(object sender, EventArgs e)
         {
             trackBar12.Value = (int)numericUpDown12.Value;
-            ((Form1)this.Owner).send_angle(int.Parse(comboBox12.Text), (int)numericUpDown12.Value);
+            if (checkBox1.Checked)
+            {
+                ((Form1)this.Owner).send_angle(int.Parse(comboBox12.Text), (int)numericUpDown12.Value);
+            }
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -302,7 +351,10 @@ namespace AHO_for_windows
         private void numericUpDown11_ValueChanged(object sender, EventArgs e)
         {
             trackBar11.Value = (int)numericUpDown11.Value;
-            ((Form1)this.Owner).send_angle(int.Parse(comboBox11.Text), (int)numericUpDown11.Value);
+            if (checkBox1.Checked)
+            {
+                ((Form1)this.Owner).send_angle(int.Parse(comboBox11.Text), (int)numericUpDown11.Value);
+            }
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -318,7 +370,10 @@ namespace AHO_for_windows
         private void numericUpDown10_ValueChanged(object sender, EventArgs e)
         {
             trackBar10.Value = (int)numericUpDown10.Value;
-            ((Form1)this.Owner).send_angle(int.Parse(comboBox10.Text), (int)numericUpDown10.Value);
+            if (checkBox1.Checked)
+            {
+                ((Form1)this.Owner).send_angle(int.Parse(comboBox10.Text), (int)numericUpDown10.Value);
+            }
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -334,7 +389,10 @@ namespace AHO_for_windows
         private void numericUpDown9_ValueChanged(object sender, EventArgs e)
         {
             trackBar9.Value = (int)numericUpDown9.Value;
-            ((Form1)this.Owner).send_angle(int.Parse(comboBox9.Text), (int)numericUpDown9.Value);
+            if (checkBox1.Checked)
+            {
+                ((Form1)this.Owner).send_angle(int.Parse(comboBox9.Text), (int)numericUpDown9.Value);
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -413,17 +471,7 @@ namespace AHO_for_windows
         private void button16_Click(object sender, EventArgs e)
         {
             save();
-            int loop = ((Form1)this.Owner).pose[pose_id].edit_time / 100;
-            int[] d_theta = new int[20];
-            for(int i = 0; i < 20; i++)
-            {
-                d_theta[i] = (int)((float)(((Form1)this.Owner).pose[pose_id].get_angle(i)) / loop);
-            }
-            for (int i=0;i<loop ;i++)
-            {
-
-                Task.Delay(100);
-            }
+            ((Form1)this.Owner).move(pose_id);
         }
 
         private void button17_Click(object sender, EventArgs e)
