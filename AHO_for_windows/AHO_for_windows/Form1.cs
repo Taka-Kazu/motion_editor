@@ -93,7 +93,7 @@ namespace AHO_for_windows
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             trackBar1.Value = (int)numericUpDown1.Value;
-            send_ics(int.Parse(comboBox3.Text), angle2value((int)numericUpDown1.Value));
+            send_angle(int.Parse(comboBox3.Text), angle2value((int)numericUpDown1.Value));
         }
 
         private void button24_Click(object sender, EventArgs e)
@@ -103,10 +103,46 @@ namespace AHO_for_windows
 
         private void button23_Click(object sender, EventArgs e)
         {
-           
+            Byte[] data = new Byte[4];
+            data[0] = Convert.ToByte(0b11111111);
+            data[1] = data[2] = data[3] = 0;
+            try
+            {
+                serialPort1.Write(data, 0, 3);
+            }
+            catch (Exception exception)
+            {
+                richTextBox1.Text += "送信時にエラーが発生しました\n";
+            }
+
+            richTextBox1.Text += "received: ";
+            for (int i = 0; i < 5; i++)
+            {
+                try
+                {
+                    if (serialPort1.BytesToRead > 0)
+                    {
+                        Byte value = Convert.ToByte(serialPort1.ReadByte());
+                        richTextBox1.Text += value.ToString("X") + " ";
+                        if (i == 4)
+                        {
+                            comboBox3.SelectedValue = value;
+                        }
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+                catch (Exception exception)
+                {
+                    richTextBox1.Text += "受信時にエラーが発生しました\n";
+                }
+            }
+            richTextBox1.Text += "\n";
         }
 
-        private void send_ics(int id, int angle)
+        private void send_angle(int id, int angle)
         {
             Byte[] data = new Byte[3];
             data[0] = Convert.ToByte(id | 0x80);
@@ -134,7 +170,8 @@ namespace AHO_for_windows
                 {
                     if(serialPort1.BytesToRead > 0)
                     {
-                        richTextBox1.Text += serialPort1.ReadByte().ToString("X") + " ";
+                        Byte value = Convert.ToByte(serialPort1.ReadByte());
+                        richTextBox1.Text += value.ToString("X") + " ";
                     }
                     else
                     {
@@ -153,6 +190,11 @@ namespace AHO_for_windows
         {
             int value = (int)((float)angle / (270.0f) * 8000.0f + 3500.0f);
             return value;
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

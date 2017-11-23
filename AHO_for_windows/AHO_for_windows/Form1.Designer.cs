@@ -33,45 +33,46 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ファイルToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.新規ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.開くToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button23 = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
-            this.新規ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.button23 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.button24 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // serialPort1
@@ -110,10 +111,16 @@
             this.ファイルToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ファイルToolStripMenuItem.Text = "ファイル";
             // 
+            // 新規ToolStripMenuItem
+            // 
+            this.新規ToolStripMenuItem.Name = "新規ToolStripMenuItem";
+            this.新規ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.新規ToolStripMenuItem.Text = "新規";
+            // 
             // 開くToolStripMenuItem
             // 
             this.開くToolStripMenuItem.Name = "開くToolStripMenuItem";
-            this.開くToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.開くToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.開くToolStripMenuItem.Text = "開く";
             // 
             // comboBox2
@@ -149,6 +156,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button25);
             this.groupBox1.Controls.Add(this.button24);
             this.groupBox1.Controls.Add(this.trackBar1);
             this.groupBox1.Controls.Add(this.numericUpDown1);
@@ -186,158 +194,113 @@
             this.groupBox1.Text = "モーション";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button2
+            // button24
             // 
-            this.button2.Location = new System.Drawing.Point(132, 137);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 46);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "POS1";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button24.Location = new System.Drawing.Point(447, 79);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(75, 25);
+            this.button24.TabIndex = 28;
+            this.button24.Text = "リセット";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
-            // button3
+            // trackBar1
             // 
-            this.button3.Location = new System.Drawing.Point(237, 137);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 46);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "POS2";
-            this.button3.UseVisualStyleBackColor = true;
+            this.trackBar1.AutoSize = false;
+            this.trackBar1.Location = new System.Drawing.Point(258, 45);
+            this.trackBar1.Maximum = 270;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(183, 32);
+            this.trackBar1.TabIndex = 27;
+            this.trackBar1.Value = 135;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
-            // button4
+            // numericUpDown1
             // 
-            this.button4.Location = new System.Drawing.Point(342, 137);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(99, 46);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "POS3";
-            this.button4.UseVisualStyleBackColor = true;
+            this.numericUpDown1.Location = new System.Drawing.Point(369, 83);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            270,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(72, 19);
+            this.numericUpDown1.TabIndex = 26;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            135,
+            0,
+            0,
+            0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
-            // button5
+            // label2
             // 
-            this.button5.Location = new System.Drawing.Point(447, 137);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(99, 46);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "POS4";
-            this.button5.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(223, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 12);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "角度";
             // 
-            // button6
+            // button23
             // 
-            this.button6.Location = new System.Drawing.Point(27, 189);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(99, 46);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "POS5";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button23.Location = new System.Drawing.Point(327, 14);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(75, 26);
+            this.button23.TabIndex = 24;
+            this.button23.Text = "取得";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
-            // textBox1
+            // comboBox3
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(6, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 19);
-            this.textBox1.TabIndex = 5;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.comboBox3.Location = new System.Drawing.Point(259, 16);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(62, 20);
+            this.comboBox3.TabIndex = 23;
             // 
-            // button7
+            // label1
             // 
-            this.button7.Location = new System.Drawing.Point(112, 16);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "保存";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(27, 241);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(99, 46);
-            this.button8.TabIndex = 11;
-            this.button8.Text = "POS10";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(447, 189);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(99, 46);
-            this.button9.TabIndex = 10;
-            this.button9.Text = "POS9";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(342, 189);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(99, 46);
-            this.button10.TabIndex = 9;
-            this.button10.Text = "POS8";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(237, 189);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(99, 46);
-            this.button11.TabIndex = 8;
-            this.button11.Text = "POS7";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(132, 189);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(99, 46);
-            this.button12.TabIndex = 7;
-            this.button12.Text = "POS6";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(27, 293);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(99, 46);
-            this.button13.TabIndex = 16;
-            this.button13.Text = "POS15";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(447, 241);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(99, 46);
-            this.button14.TabIndex = 15;
-            this.button14.Text = "POS14";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(342, 241);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(99, 46);
-            this.button15.TabIndex = 14;
-            this.button15.Text = "POS13";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(237, 241);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(99, 46);
-            this.button16.TabIndex = 13;
-            this.button16.Text = "POS12";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(132, 241);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(99, 46);
-            this.button17.TabIndex = 12;
-            this.button17.Text = "POS11";
-            this.button17.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(236, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(16, 12);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "ID";
             // 
             // button18
             // 
@@ -384,119 +347,168 @@
             this.button22.Text = "POS16";
             this.button22.UseVisualStyleBackColor = true;
             // 
-            // 新規ToolStripMenuItem
+            // button13
             // 
-            this.新規ToolStripMenuItem.Name = "新規ToolStripMenuItem";
-            this.新規ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.新規ToolStripMenuItem.Text = "新規";
+            this.button13.Location = new System.Drawing.Point(27, 293);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(99, 46);
+            this.button13.TabIndex = 16;
+            this.button13.Text = "POS15";
+            this.button13.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // button14
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(236, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 12);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "ID";
+            this.button14.Location = new System.Drawing.Point(447, 241);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(99, 46);
+            this.button14.TabIndex = 15;
+            this.button14.Text = "POS14";
+            this.button14.UseVisualStyleBackColor = true;
             // 
-            // comboBox3
+            // button15
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31"});
-            this.comboBox3.Location = new System.Drawing.Point(259, 16);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(62, 20);
-            this.comboBox3.TabIndex = 23;
+            this.button15.Location = new System.Drawing.Point(342, 241);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(99, 46);
+            this.button15.TabIndex = 14;
+            this.button15.Text = "POS13";
+            this.button15.UseVisualStyleBackColor = true;
             // 
-            // button23
+            // button16
             // 
-            this.button23.Location = new System.Drawing.Point(327, 14);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(75, 26);
-            this.button23.TabIndex = 24;
-            this.button23.Text = "取得";
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
+            this.button16.Location = new System.Drawing.Point(237, 241);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(99, 46);
+            this.button16.TabIndex = 13;
+            this.button16.Text = "POS12";
+            this.button16.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // button17
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(223, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 12);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "角度";
+            this.button17.Location = new System.Drawing.Point(132, 241);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(99, 46);
+            this.button17.TabIndex = 12;
+            this.button17.Text = "POS11";
+            this.button17.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown1
+            // button8
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(369, 83);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            270,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(72, 19);
-            this.numericUpDown1.TabIndex = 26;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            135,
-            0,
-            0,
-            0});
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.button8.Location = new System.Drawing.Point(27, 241);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(99, 46);
+            this.button8.TabIndex = 11;
+            this.button8.Text = "POS10";
+            this.button8.UseVisualStyleBackColor = true;
             // 
-            // trackBar1
+            // button9
             // 
-            this.trackBar1.AutoSize = false;
-            this.trackBar1.Location = new System.Drawing.Point(258, 45);
-            this.trackBar1.Maximum = 270;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(183, 32);
-            this.trackBar1.TabIndex = 27;
-            this.trackBar1.Value = 135;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            this.button9.Location = new System.Drawing.Point(447, 189);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(99, 46);
+            this.button9.TabIndex = 10;
+            this.button9.Text = "POS9";
+            this.button9.UseVisualStyleBackColor = true;
             // 
-            // button24
+            // button10
             // 
-            this.button24.Location = new System.Drawing.Point(447, 79);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(75, 25);
-            this.button24.TabIndex = 28;
-            this.button24.Text = "リセット";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
+            this.button10.Location = new System.Drawing.Point(342, 189);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(99, 46);
+            this.button10.TabIndex = 9;
+            this.button10.Text = "POS8";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(237, 189);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(99, 46);
+            this.button11.TabIndex = 8;
+            this.button11.Text = "POS7";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(132, 189);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(99, 46);
+            this.button12.TabIndex = 7;
+            this.button12.Text = "POS6";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(112, 16);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "保存";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Location = new System.Drawing.Point(6, 18);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(100, 19);
+            this.textBox1.TabIndex = 5;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(27, 189);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(99, 46);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "POS5";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(447, 137);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(99, 46);
+            this.button5.TabIndex = 3;
+            this.button5.Text = "POS4";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(342, 137);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(99, 46);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "POS3";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(237, 137);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(99, 46);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "POS2";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(132, 137);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(99, 46);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "POS1";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button25
+            // 
+            this.button25.Location = new System.Drawing.Point(447, 50);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(75, 23);
+            this.button25.TabIndex = 29;
+            this.button25.Text = "FREE";
+            this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // Form1
             // 
@@ -519,8 +531,8 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -567,6 +579,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button button25;
     }
 }
 
