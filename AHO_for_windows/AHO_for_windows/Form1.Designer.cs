@@ -127,8 +127,10 @@
             // 
             // richTextBox1
             // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.Window;
             this.richTextBox1.Location = new System.Drawing.Point(12, 383);
             this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
             this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
             this.richTextBox1.Size = new System.Drawing.Size(680, 106);
             this.richTextBox1.TabIndex = 4;
@@ -212,11 +214,12 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
             this.textBox1.Location = new System.Drawing.Point(6, 18);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(100, 19);
             this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "hoge.csv";
             // 
             // button7
             // 
