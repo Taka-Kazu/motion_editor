@@ -1,0 +1,8 @@
+E:\Users\一貴\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\bin\Debug\AHO_for_windows.exe.config
+E:\Users\一貴\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\bin\Debug\AHO_for_windows.exe
+E:\Users\一貴\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\bin\Debug\AHO_for_windows.pdb
+E:\Users\一貴\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\obj\Debug\AHO_for_windows.csprojResolveAssemblyReference.cache
+E:\Users\一貴\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\obj\Debug\AHO_for_windows.Properties.Resources.resources
+E:\Users\一貴\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\obj\Debug\AHO_for_windows.csproj.GenerateResource.Cache
+E:\Users\一貴\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\obj\Debug\AHO_for_windows.exe
+E:\Users\一貴\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\obj\Debug\AHO_for_windows.pdb
