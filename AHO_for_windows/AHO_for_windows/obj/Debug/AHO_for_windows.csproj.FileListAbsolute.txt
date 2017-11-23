@@ -15,3 +15,4 @@ D:\Users\taka-\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\ob
 D:\Users\taka-\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\obj\Debug\AHO_for_windows.csproj.CoreCompileInputs.cache
 D:\Users\taka-\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\obj\Debug\AHO_for_windows.exe
 D:\Users\taka-\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\obj\Debug\AHO_for_windows.pdb
+D:\Users\taka-\Documents\autome\motion_editor\AHO_for_windows\AHO_for_windows\obj\Debug\AHO_for_windows.Form1.resources
