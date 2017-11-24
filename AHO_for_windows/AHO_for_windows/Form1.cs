@@ -60,7 +60,7 @@ namespace AHO_for_windows
             neutral_angle[8] = 123; min_angle[8] = 32; max_angle[8] = 123;
             neutral_angle[9] = 137; min_angle[9] = 137; max_angle[9] = 185;
             neutral_angle[10] = 180; min_angle[10] = 0; max_angle[10] = 180;
-            neutral_angle[11] = 135; min_angle[11] = 16; max_angle[11] = 135;
+            neutral_angle[11] = 118; min_angle[11] = 16; max_angle[11] = 135;
             neutral_angle[12] = 16; min_angle[12] = 16; max_angle[12] = 196;
             neutral_angle[13] = 52; min_angle[13] = 52; max_angle[13] = 144;
             neutral_angle[14] = 132; min_angle[14] = 45; max_angle[14] = 227;
@@ -299,11 +299,11 @@ namespace AHO_for_windows
         }
         private void print_log(String str)
         {
-            
+            /*
             richTextBox1.AppendText(str);
             richTextBox1.Select(richTextBox1.Text.Length, 0);
             richTextBox1.ScrollToCaret();
-            
+            */
         }
 
         public float get_neutral_angle(int id)
