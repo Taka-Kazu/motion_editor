@@ -58,12 +58,12 @@ namespace AHO_for_windows
             neutral_angle[6] = 137; min_angle[6] = 137; max_angle[6] = 213;
             neutral_angle[7] = 143; min_angle[7] = 74; max_angle[7] = 143;
             neutral_angle[8] = 123; min_angle[8] = 32; max_angle[8] = 123;
-            neutral_angle[9] = 137; min_angle[9] = 137; max_angle[9] = 185;
+            neutral_angle[9] = 137; min_angle[9] = 95; max_angle[9] = 185;
             neutral_angle[10] = 180; min_angle[10] = 0; max_angle[10] = 180;
             neutral_angle[11] = 118; min_angle[11] = 16; max_angle[11] = 135;
             neutral_angle[12] = 16; min_angle[12] = 16; max_angle[12] = 196;
             neutral_angle[13] = 52; min_angle[13] = 52; max_angle[13] = 144;
-            neutral_angle[14] = 132; min_angle[14] = 45; max_angle[14] = 227;
+            neutral_angle[14] = 106; min_angle[14] = 45; max_angle[14] = 227;
             neutral_angle[15] = 135; min_angle[14] = 0; max_angle[14] = 270;
 
             for(int i = 0; i < POSE_NUM; i++)
@@ -194,6 +194,8 @@ namespace AHO_for_windows
 
         public void send_angle(int id, int angle)
         {
+            serialPort1.DiscardOutBuffer();
+            serialPort1.DiscardInBuffer();
             if(angle < min_angle[id])
             {
                 angle = (int)min_angle[id];
@@ -222,15 +224,17 @@ namespace AHO_for_windows
                 print_log("送信時にエラーが発生しました\n");
             }
             print_log("send: " + data[0].ToString("X") + " " + data[1].ToString("X") + " " + data[2].ToString("X") + "\n");
-
+            while (serialPort1.BytesToWrite > 0) { }
+            Byte[] received_data = new Byte[6];
+            received_data.Initialize();
             print_log("received: ");
             for (int i=0;i<6;i++) {
                 try
                 {
                     if(serialPort1.BytesToRead > 0)
                     {
-                        Byte value = Convert.ToByte(serialPort1.ReadByte());
-                        print_log(value.ToString("X") + " ");
+                        received_data[i] = Convert.ToByte(serialPort1.ReadByte());
+                        print_log(received_data[i].ToString("X") + " ");
                     }
                     else
                     {
@@ -244,6 +248,16 @@ namespace AHO_for_windows
                 }
             }
             print_log("\n");
+            int received_angle = (received_data[3] << 7) + received_data[4];
+            if (received_angle == angle)
+            {
+                print_log("match\n");
+            }
+            else
+            {
+                print_log("not match\n");
+            }
+            System.Threading.Thread.Sleep(3);
         }
 
         private int angle2value(int angle)
@@ -299,11 +313,9 @@ namespace AHO_for_windows
         }
         private void print_log(String str)
         {
-            /*
             richTextBox1.AppendText(str);
             richTextBox1.Select(richTextBox1.Text.Length, 0);
             richTextBox1.ScrollToCaret();
-            */
         }
 
         public float get_neutral_angle(int id)
