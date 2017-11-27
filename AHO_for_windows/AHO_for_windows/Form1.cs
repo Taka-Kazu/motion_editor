@@ -626,6 +626,7 @@ namespace AHO_for_windows
                 sw.Close();
                 stream.Close();
             }
+            textBox1.Text = Path.GetFileName(saveFileDialog1.FileName);
         }
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -656,9 +657,15 @@ namespace AHO_for_windows
                 }
                 //print_log("\n");
             }
+            textBox1.Text = Path.GetFileName(openFileDialog1.FileName);
         }
 
         private void 保存SToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.ShowDialog(this);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
         {
             saveFileDialog1.ShowDialog(this);
         }
