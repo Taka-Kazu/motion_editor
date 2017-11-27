@@ -23,6 +23,7 @@ namespace AHO_for_windows
         public Pose[] pose = new Pose[POSE_NUM];
         public Pose buff_pose;
         public Pose current_pose;
+        bool mbed_is_selected = false;
 
         private static Form1 _form1Instance;
 
@@ -72,6 +73,8 @@ namespace AHO_for_windows
             }
             buff_pose = new Pose();
             current_pose = new Pose();
+
+            comboBox4.SelectedText = "ICS";
 
         }
 
@@ -668,6 +671,17 @@ namespace AHO_for_windows
         private void button7_Click(object sender, EventArgs e)
         {
             saveFileDialog1.ShowDialog(this);
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBox4.SelectedText == "mbed")
+            {
+                mbed_is_selected = true;
+            }else if(comboBox4.SelectedText == "ICS")
+            {
+                mbed_is_selected = false;
+            }
         }
     }
 }
