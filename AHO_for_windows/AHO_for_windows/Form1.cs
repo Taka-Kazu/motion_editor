@@ -118,7 +118,7 @@ namespace AHO_for_windows
             }
             catch (Exception exception)
             {
-                MessageBox.Show("(´･ω･`)%sが開けなかったよ\n", serialPort1.PortName);
+                MessageBox.Show("(´･ω･`)"+ serialPort1.PortName  + "が開けなかったよ\n");
                 return;
             }
             print_log(serialPort1.PortName + "に接続しました\n");
@@ -142,7 +142,14 @@ namespace AHO_for_windows
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             trackBar1.Value = (int)numericUpDown1.Value;
-            send_angle(int.Parse(comboBox3.Text), (int)numericUpDown1.Value);
+            try
+            {
+                send_angle(int.Parse(comboBox3.Text), (int)numericUpDown1.Value);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("(´･ω･`)" + serialPort1.PortName + "が開かれていないよ\n");
+            }
         }
 
         private void button24_Click(object sender, EventArgs e)
