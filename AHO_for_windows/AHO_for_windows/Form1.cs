@@ -622,9 +622,13 @@ namespace AHO_for_windows
                         {
                             str += pose[i].get_angle(j).ToString() + ',';
                         }
-                        str += "\n";
-                        sw.WriteLine(str);
+                        if (str.Length != 0)
+                        {
+                            //str += "\n";
+                            sw.WriteLine(str);
+                        }
                     }
+                    //print_log(str);
                 }
                 sw.Close();
                 stream.Close();
