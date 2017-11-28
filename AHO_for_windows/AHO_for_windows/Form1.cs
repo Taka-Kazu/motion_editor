@@ -624,8 +624,8 @@ namespace AHO_for_windows
                         }
                         if (str.Length != 0)
                         {
-                            //str += "\n";
-                            sw.WriteLine(str);
+                            str += "\n";
+                            sw.Write(str);
                         }
                     }
                     //print_log(str);
