@@ -206,7 +206,7 @@ namespace AHO_for_windows
         {
             serialPort1.DiscardOutBuffer();
             serialPort1.DiscardInBuffer();
-            if(angle < min_angle[id])
+            if (angle < min_angle[id])
             {
                 angle = (int)min_angle[id];
             }else if(angle > max_angle[id])
@@ -577,9 +577,40 @@ namespace AHO_for_windows
                 Task.Delay(dt);
                 //System.Threading.Thread.Sleep(dt);
             }*/
-            for(int i = 0; i < SERVO_NUM; i++)
+            if (comboBox4.Text == "ICS")
             {
-                send_angle(i, pose[pose_id].get_angle(i));
+                for (int i = 0; i < SERVO_NUM; i++)
+                {
+                    send_angle(i, pose[pose_id].get_angle(i));
+                }
+            }
+            else
+            {
+                Byte[] data = new Byte[2*(SERVO_NUM + 1)];
+                data[0] = (Byte)(pose[pose_id].edit_time >> 8);
+                data[1] = (Byte)(pose[pose_id].edit_time & 0xFF);
+                for (int i = 0; i < SERVO_NUM; i++)
+                {
+                    data[2 * (i + 1)] = (Byte)(pose[pose_id].get_angle(i) >> 8);
+                    data[2 * (i + 1) +1] = (Byte)(pose[pose_id].get_angle(i) & 0xFF);
+                }
+
+                try
+                {
+                    while (serialPort1.BytesToWrite > 0) { }
+                    serialPort1.Write(data, 0, 2 * (SERVO_NUM + 1));
+                    /*
+                    for(int i = 0; i < SERVO_NUM; i++)
+                    {
+                        print_log((data[2 * (i + 1)] + data[2 * (i + 1) + 1]).ToString() + "\n");
+                    }
+                    */
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("(´･ω･`)COMポートが開かれていないよ\n");
+                    throw;
+                }
             }
             //Task.Delay(pose[pose_id].edit_time);
             System.Threading.Thread.Sleep(pose[pose_id].edit_time);
@@ -587,12 +618,20 @@ namespace AHO_for_windows
 
         private void button26_Click(object sender, EventArgs e)
         {
-            for(int i = 0; i < POSE_NUM; i++)
+            try
             {
-                if (pose[i].ready)
+                for (int i = 0; i < POSE_NUM; i++)
                 {
-                    move(i);
+                    if (pose[i].ready)
+                    {
+                        move(i);
+                    }
                 }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("(´･ω･`)COMポートが開かれていないよ\n");
+                return;
             }
         }
 
@@ -640,7 +679,7 @@ namespace AHO_for_windows
         {
             String str = File.ReadAllText(openFileDialog1.FileName);
             String[] lines = str.Split(new string[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries);
-            print_log(lines.Length.ToString());
+            //print_log(lines.Length.ToString());
             
             for(int i = 0; i < lines.Length; i++)
             {
