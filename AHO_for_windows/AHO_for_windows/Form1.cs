@@ -687,5 +687,25 @@ namespace AHO_for_windows
                 mbed_is_selected = false;
             }
         }
+
+        private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            try
+            {
+                while (true)
+                {
+                    if(serialPort1.BytesToRead > 0)
+                    {
+                        return;
+                    }
+                    print_log(serialPort1.ReadChar().ToString());
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }
