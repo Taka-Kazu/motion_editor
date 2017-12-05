@@ -204,6 +204,10 @@ namespace AHO_for_windows
 
         public void send_angle(int id, int angle)
         {
+            if (comboBox4.Text != "ICS")
+            {
+                return;
+            }
             serialPort1.DiscardOutBuffer();
             serialPort1.DiscardInBuffer();
             if (angle < min_angle[id])
@@ -583,6 +587,7 @@ namespace AHO_for_windows
                 {
                     send_angle(i, pose[pose_id].get_angle(i));
                 }
+                System.Threading.Thread.Sleep(pose[pose_id].edit_time);
             }
             else
             {
@@ -599,6 +604,7 @@ namespace AHO_for_windows
                 {
                     while (serialPort1.BytesToWrite > 0) { }
                     serialPort1.Write(data, 0, 2 * (SERVO_NUM + 1));
+                    System.Threading.Thread.Sleep(3);
                     /*
                     for(int i = 0; i < SERVO_NUM; i++)
                     {
@@ -612,8 +618,6 @@ namespace AHO_for_windows
                     throw;
                 }
             }
-            //Task.Delay(pose[pose_id].edit_time);
-            System.Threading.Thread.Sleep(pose[pose_id].edit_time);
         }
 
         private void button26_Click(object sender, EventArgs e)
@@ -721,30 +725,31 @@ namespace AHO_for_windows
             if(comboBox4.SelectedText == "mbed")
             {
                 mbed_is_selected = true;
+                serialPort1.Parity = Parity.None;
+                serialPort1.Close();
+                serialPort1.Open();
             }else if(comboBox4.SelectedText == "ICS")
             {
                 mbed_is_selected = false;
+                serialPort1.Parity = Parity.Even;
+                serialPort1.Close();
+                serialPort1.Open();
             }
         }
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            try
-            {
-                while (true)
-                {
-                    if(serialPort1.BytesToRead > 0)
-                    {
-                        return;
-                    }
-                    print_log(serialPort1.ReadChar().ToString());
-                }
-            }
-            catch (Exception)
-            {
+            byte[] readData = new byte[serialPort1.BytesToRead];
 
-                throw;
-            }
+            serialPort1.Read(readData, 0, readData.Length);
+            Invoke(new AppendTextDelegate(packet_restortion), readData);
+        }
+        
+        delegate void AppendTextDelegate(byte[] text);
+
+        private void packet_restortion(byte[] data)
+        {
+            
         }
     }
 }
