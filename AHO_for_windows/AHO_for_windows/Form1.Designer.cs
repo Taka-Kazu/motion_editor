@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -653,7 +652,6 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Form1";
