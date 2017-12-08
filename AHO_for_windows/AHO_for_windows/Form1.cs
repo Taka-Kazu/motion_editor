@@ -682,7 +682,7 @@ namespace AHO_for_windows
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             String str = File.ReadAllText(openFileDialog1.FileName);
-            String[] lines = str.Split(new string[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries);
+            String[] lines = str.Split(new string[] {"\n"}, StringSplitOptions.RemoveEmptyEntries);
             //print_log(lines.Length.ToString());
             
             for(int i = 0; i < lines.Length; i++)
