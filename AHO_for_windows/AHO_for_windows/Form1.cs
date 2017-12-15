@@ -681,6 +681,10 @@ namespace AHO_for_windows
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
+            foreach (var item in pose)
+            {
+                item.initialize();
+            }
             String str = File.ReadAllText(openFileDialog1.FileName);
             String[] lines = str.Split(new string[] {"\n"}, StringSplitOptions.RemoveEmptyEntries);
             //print_log(lines.Length.ToString());
