@@ -383,6 +383,7 @@ namespace AHO_for_windows
                 time = 1000;
                 angle = new int[SERVO_NUM];
                 is_enabled = false;
+                ready_flag = false;
                 for(int i = 0; i < SERVO_NUM; i++)
                 {
                     angle[i] = 135;
